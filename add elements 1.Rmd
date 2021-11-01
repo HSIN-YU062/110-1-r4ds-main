@@ -1,0 +1,63 @@
+---
+title: "11/1 影片作業"
+output: html_document
+---
+example1 <- c("John", "Mary", "Bill")
+example1 <- c("John", "Mary", "Bill","Jungkook")
+example1[[4]] <- "Jungkook"
+
+
+# retrieve an non-existing element name "person4"
+example1[["person4"]] <- "Ken"
+# retrieve two non-existing element positions
+example1[c(7,8)] <- c("person7"="Jack", "Janem")
+example1
+example1 <- c("John", "Mary", "Bill")
+example1 <- c("John", "Mary", "Bill")
+example[c("person4","person5")]
+c("John", "Mary", "Bill","Jungkook","V")
+c("John", "Mary", "Bill","Jungkook","person5"="V")
+***
+
+example1[c(4,5)] <-c(Jungkook","person5"="V")
+
+example1 <- c("John", "Mary", "Bill")
+example1[c("person4","person5")]
+
+example1[c("person4","person5")]<-c("Jungkook","V")
+
+
+'''{r}
+
+JohnsFamily <-
+  list(
+    name = "John", 
+    age = 35,
+    spouse = list(
+      name = "Mary", 
+      age = 32),
+    children = list(
+      list(
+        name = "Bill", 
+        age = 5),
+      list(
+        name = "Jane", 
+        age = 3)
+    )
+  )
+  
+  
+  
+JohnsFamilyCopy2$children
+
+JohnsFamilyCopy2 <- JohnsFamily
+# Add a new born 
+newborn<-list(name="Lisa",
+age="0")
+JohnsFamilyCopy2$children
+
+
+
+JohnsFamilyCopy2$children[[3]] <- newborn
+
+  list(name="Lisa", age=0) # $ is for list only
