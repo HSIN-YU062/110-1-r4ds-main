@@ -1,0 +1,121 @@
+---
+title: "week9_2"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+commonClasses <- list()
+
+# save three different atomic vectors
+commonClasses$character <- c("John", "Mary", "Bill")
+commonClasses$numeric <- c(2.3, 4, 7)
+commonClasses$logical <- c(TRUE, T, F, FALSE)
+
+
+# check each atomic vector class
+class(commonClasses$character) # name call on commonClasses to get its value then retrieve the element value whose element name is "character"
+
+class(commonClasses$numeric)
+class(commonClasses$logical)
+
+bloodTypes <- c("AB", "AB", "A", "B", "A", "A", "B", "O", "O", "AB")
+
+bloodTypes_fct <- factor(bloodTypes)
+
+bloodTypes_fct <-factor(c("AB", "AB", "A", "B", "A", "A", "B", "O", "O", "AB"))
+
+table(bloodTypes_fct)
+levels(bloodTypes_fct)
+
+
+bloodTypes_fct_levelsSetup <- 
+  factor(bloodTypes, levels=c("A", "B", "O", "AB"))
+  
+  levels(bloodTypes_fct_levelsSetup)
+table(bloodTypes_fct_levelsSetup)
+
+class(bloodTypes_fct_levelsSetup)
+
+table(bloodTypes_fct_levelsSetup)
+
+
+household_income <- c("low income", "low income", "middle income", "low income", "high income", "middle income", "high income", "high income", "middle income", "middle income")
+
+household_income_fct <- 
+  factor(household_income)
+levels(household_income_fct)
+
+household_income_fct_levelsSetup <-
+  factor(household_income, levels = c("low income", "middle income", "high income"))
+levels(household_income_fct_levelsSetup)
+
+
+household_income_fct_levelsSetup_ordered <-
+  factor(
+    household_income, 
+    levels = c("low income", "middle income", "high income"),
+    ordered = T
+    )
+    
+  
+  class(household_income_fct_levelsSetup_ordered)
+  class(household_income_fct)
+
+table(household_income_fct )
+
+table(household_income_fct_levelsSetup )
+
+
+ income"household_income_fct_levelsSetup[[1]]
+ 
+ 
+household_income_fct_levelsSetup[[1]] > "middle  income"
+
+
+household_income_fct_levelsSetup[[1]] > "low income"
+
+household_income_fct_levelsSetup_ordered <-
+  factor(
+    household_income, 
+    levels = c("low income", "middle income", "high income"),
+    ordered = T
+    )
+class(household_income_fct_levelsSetup_ordered)
+
+class(household_income_fct)
+class(household_income_fct_levelsSetup)
+
+commonClasses$ordered_factor <- household_income_fct_levelsSetup_ordered
+class(commonClasses$ordered_factor)
+
+
+commonClasses$factor <- bloodTypes_fct_levelsSetup
+class(commonClasses$factor)
+# factor parsed data has factor class
+
+
+household_income_fct_levelsSetup_orderded[[1]]> "low income"
+
